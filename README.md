@@ -41,7 +41,7 @@ requests
 dnspython  
 threadpool  
 queue  
-selenium
+selenium  
 BeautifulSoup4
 
 #### 注:
