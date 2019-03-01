@@ -1,0 +1,4 @@
+{
+"domain":".alibaba.com",
+"Blacklist_domain":[".cn.alibaba.com",".en.alibaba.com",".trustpass.alibaba.com",".fm.alibaba.com",".china.alibaba.com",".mail.alibaba.com"]
+}

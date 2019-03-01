@@ -1,0 +1,20 @@
+{
+"domain":".qq.com",
+"Blacklist_domain":[
+        ".qzone.qq.com",
+        ".gamebbs.qq.com",
+        ".ke.qq.com",
+        ".house.qq.com",
+        ".auto.qq.com",
+        ".openwebgame.qq.com",
+        ".house.qq.com",
+        ".zhan.qq.com",
+        ".114.qq.com",
+        ".photo.store.qq.com",
+        ".b.qq.com",
+        ".m.qq.com",
+        ".z.qq.com",
+        ".t.qq.com",
+        ".ly.qq.com"
+    ]
+}

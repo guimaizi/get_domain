@@ -1,0 +1,13 @@
+{
+"domain":".163.com",
+"Blacklist_domain":[
+".qiye.163.com",
+".blog.163.com",
+".pp.163.com",
+".mail.163.com",
+".vip.163.com",
+".photo.163.com",
+".house.163.com",
+".auto.163.com"
+]
+}
