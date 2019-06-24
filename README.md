@@ -64,7 +64,7 @@ pip 安装requirements.txt
 }
 ```
 
-设置fun_all第12行
+设置fun_all.py第12行
 ```
 修改对应config.json绝对路径
 ```
