@@ -70,13 +70,15 @@ pip 安装requirements.txt
 ```
 
 ### 运行说明
+
 ![](https://raw.githubusercontent.com/guimaizi/cloud/test/20190614112043.png)
+
 获取子域名、子域名管理、子域名监控
->python start.py [argv]
--s 开始通过subfinder爆破获取第一批域名;
--u 调出数据库内domain重新爬行，通过新旧返回值比对，发现业务变化;
--i 导入域名txt字典文件  格式为:xxx.xxx.com;
--iurl 导入url txt文件 格式为:http://xxx.xxx.com/dasd.php;
+>python start.py [argv]  
+-s 开始通过subfinder爆破获取第一批域名;  
+-u 调出数据库内domain重新爬行，通过新旧返回值比对，发现业务变化;  
+-i 导入域名txt字典文件  格式为:xxx.xxx.com;  
+-iurl 导入url txt文件 格式为:http://xxx.xxx.com/dasd.php;  
 
 ### 码个代码不容易，希望有钱人打赏。
 ![](https://raw.githubusercontent.com/guimaizi/cloud/test/img/20190301182006.jpg)
