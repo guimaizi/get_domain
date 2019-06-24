@@ -1,3 +1,34 @@
+# 域名收集3.0
+### 简介
+在职业刷src或者apt攻击者的角度，单单过一遍爆破的域名是不能满足持续性漏洞挖掘的;从职业刷src的角度，过一遍收集的子域名，已经发现了所有漏洞并已经提交后修复，或者用当前漏洞测试方法并没发现有漏洞，这样业务是安全的，但这个安全是在当下时间的，企业要发展、要解决当前问题，就会出新业务、或者不断的修复更新旧问题，这就是业务的变化，通过持续性监控子域名就会发现业务的变化，最快速度的发现变化，对变化进行安全测试、漏洞挖掘。有经验的刷src的同学都知道，新业务发现漏洞概率都很高。
+
+### 运行说明
+![](https://raw.githubusercontent.com/guimaizi/cloud/test/20190614112043.png)
+获取子域名、子域名管理、子域名监控
+>python start.py [argv]
+-s 开始通过subfinder爆破获取第一批域名;
+-u 调出数据库内domain重新爬行，通过新旧返回值比对，发现业务变化;
+-i 导入域名txt字典文件  格式为:xxx.xxx.com;
+-iurl 导入url txt文件 格式为:http://xxx.xxx.com/dasd.php;
+
+### 环境配置
+需要环境:
+* python3 
+  python3.5+ 自行官方下载
+* mongodb 
+  自行官方下载 建议docker搭建 参考:https://www.jianshu.com/p/6fdb2bcb4b43
+* chrome
+  自行官方下载
+* chromedriver 
+  下载成功后放入python根目录或者加入全局环境变量
+  chromedriver下载地址:http://npm.taobao.org/mirrors/chromedriver/ 注:与当前chrome匹配
+* subfinder 
+  https://github.com/subfinder/subfinder
+
+pip 安装requirements.txt
+
+
+
 # 域名收集2.0
 ### 域名监控概括
 子域名收集这个路子真的是被玩烂了，花样百出、工具没有八百也有一千，无非是爆破、爬、调用搜索引擎之类，有资源的大厂有自己的dns库，但是这些在我眼里真的都很low。
@@ -64,5 +95,5 @@ Blacklist_domain 为子域名黑名单，比如46456.qzone.qq.com qq空间业务
 while_update.py进行域名监控、功能流程:5。  
 以上两功能执行结束后建议后台执行random_start.py 随机爆破，可能爆破出意想不到的业务，对应功能流程:6。
 
-### 码个代码不容易，欢迎有钱人打赏。
+### 码个代码不容易，希望有钱人打赏。
 ![](https://raw.githubusercontent.com/guimaizi/cloud/test/img/20190301182006.jpg)
