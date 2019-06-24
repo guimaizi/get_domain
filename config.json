@@ -1,0 +1,6 @@
+{	"path":"E:/code/test1",
+	"target_json":"E:/code/test1/target/qq.json",
+	"chrome_path":"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
+	"timeout":8,
+	"mongo_config":{"ip":"127.0.0.1","port":27017,"name":"","password":""}
+}
