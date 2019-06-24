@@ -2,6 +2,7 @@
 ### 简介
 在职业刷src或者apt攻击者的角度，单单过一遍爆破的域名是不能满足持续性漏洞挖掘;从职业刷src的角度，过一遍收集的子域名，已经发现了所有漏洞并已经提交后修复，或者用当前漏洞测试方法并没发现有漏洞，这样业务是安全的，但这个安全是在当下时间的，企业要发展、要解决当前问题，就会出新业务、或者不断的修复更新旧问题，这就是业务的变化，通过持续性监控子域名就会发现业务的变化，最快速度的发现变化，对变化进行安全测试、漏洞挖掘。有经验的刷src的同学都知道，新业务发现漏洞概率都很高。
 
+
 ### 环境配置
 需要环境:
 * win10/8/7/xp  
@@ -70,6 +71,7 @@ pip 安装requirements.txt
 ```
 
 ### 运行说明
+获取域名http响应结果写入mongodb库  
 
 ![](https://raw.githubusercontent.com/guimaizi/cloud/test/20190614112043.png)
 
@@ -80,7 +82,14 @@ pip 安装requirements.txt
 -i 导入域名txt字典文件  格式为:xxx.xxx.com;  
 -iurl 导入url txt文件 格式为:http://xxx.xxx.com/dasd.php;  
 
-### 码个代码不容易，希望有钱人打赏。
+![](https://raw.githubusercontent.com/guimaizi/cloud/test/20190624222624.png)
+
+### 结果
+![](https://raw.githubusercontent.com/guimaizi/cloud/test/20190624222715.png)
+
+
+
+### 码个代码不容易，希望有钱人打赏,万分感谢。
 ![](https://raw.githubusercontent.com/guimaizi/cloud/test/img/20190301182006.jpg)
 
 
