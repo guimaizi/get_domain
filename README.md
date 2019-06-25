@@ -19,7 +19,7 @@
 * subfinder  
   https://github.com/subfinder/subfinder win默认带有,其他请自行修改代码。
 
-以上配置完成,切进文件  
+以上配置完成,切进项目目录  
 pip 安装requirements.txt
 >pip install -r requirements.txt
 
