@@ -1,0 +1,6 @@
+{
+"domain":".tencent.com",
+"Blacklist_domain":[
+        ".cloud.tencent.com"
+    ]
+}

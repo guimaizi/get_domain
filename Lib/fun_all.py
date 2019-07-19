@@ -1,6 +1,5 @@
 # coding: utf-8
 '''
-Created on 2019��6��16��
 
 @author: guimaizi
 '''
@@ -9,7 +8,7 @@ from urllib.parse import urlparse
 from pip._vendor.html5lib.treebuilders import dom
 class fun_all:
     def __init__(self):
-        main_path='E:/code/test1/config.json'
+        main_path='d:/get_domain/config.json'
         with open(main_path,'r') as load_f:
             self.load_dict = json.load(load_f)
         with open(self.load_dict['target_json'],'r') as load_f:
