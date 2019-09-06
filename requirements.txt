@@ -2,4 +2,3 @@ pymongo
 selenium
 requests
 threadpool
-queue
