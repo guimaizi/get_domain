@@ -23,8 +23,9 @@ class browser_control:
         #chrome_options.add_argument(r'user-data-dir=%s'%models.read_config()['chrome_user_data'])
         chrome_options.add_argument('--disable-gpu')
         #chrome_options.add_argument('--hide-scrollbars')
+        #print(self.config_main.callback_chrome_path)
         chrome_options.binary_location = r'%s'%self.config_main.callback_chrome_path()
-        self.driver = webdriver.Chrome(options=chrome_options)
+        self.driver = webdriver.Chrome(executable_path=self.config_main.load_dict['chromedriver_path'],options=chrome_options)
         self.time=time.strftime('%Y-%m-%d',time.localtime())
     def callback_network(self):
         #return 页面的网络请求信息

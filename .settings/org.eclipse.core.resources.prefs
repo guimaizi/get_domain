@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//Lib/browser_control.py=utf-8
+encoding//Lib/fun_all.py=utf-8
 encoding//Lib/mongo_con.py=utf-8
 encoding/start.py=utf-8
 encoding/while_update.py=utf-8

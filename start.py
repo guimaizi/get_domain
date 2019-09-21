@@ -50,7 +50,7 @@ class start:
     def subfind(self):
         strs=self.config_main.callback_domain()
         filename=strs.replace('.','_')+'.txt'
-        os.system('subfinder.exe -d %s -o %s'%(strs[1:len(strs)],filename))
+        os.system('/Users/guimaizi/go/bin/subfinder -d %s -o %s'%(strs[1:len(strs)],filename))
         #print(filename)
         self.import_domain(self.config_main.import_domain_txt(filename))
         os.remove(filename)
