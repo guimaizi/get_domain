@@ -23,14 +23,21 @@
 pip 安装requirements.txt
 >pip install -r requirements.txt
 
+# 搭建不成功的,自行google搜索"python3 selenium chrome on linux/win/mac"  这个只要跑成功,连接上mongodb就大功告成了 
+
+
+
+
 设置config.json
 ```
 {
 	"path":"E:/code/test1", //项目所在绝对路径
 	"target_json":"E:/code/test1/target/qq.json",   //目标域名文件绝对路径
 	"chrome_path":"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe", //chrome文件绝对路径
+  "chromedriver_path":"/Users/guimaizi/hack-tool/chromedriver" //chromedriver驱动路径
 	"timeout":8, //全局超时设置,建议大于5
 	"mongo_config":{"ip":"127.0.0.1","port":27017,"name":"","password":""} //mongodb 配置,ip 端口 name passwrod  空密码时name pwd设置为空
+  
 }
 ```
 
