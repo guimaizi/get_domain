@@ -20,7 +20,7 @@ class start:
             if self.config_main.callback_detection_domain('http://'+url) and mongodb.find(self.config_main.callback_domain(), url)==0:
                 list_domain_start.append(url)
         mongodb.exit_mongo()
-        self.run(list_domain_start)
+        self.run(list(set(list_domain_start)))
     def import_url(self,list_domain):
         #导入URL list 格式['http://dsad.qq.com/dsadsa']
         list_domain=list(set(list_domain))
@@ -30,7 +30,8 @@ class start:
             if self.config_main.callback_detection_domain(url) and mongodb.find(self.config_main.callback_domain(), self.config_main.callback_split_domain(url, 1))==0:
                 list_domain_start.append(self.config_main.callback_split_domain(url, 1))
         mongodb.exit_mongo()
-        self.run(list_domain_start)
+        #print(list(set(list_domain_start)))
+        self.run(list(set(list_domain_start)))
     def run(self,list_domain):
         #开始获取域名
         while 1:
