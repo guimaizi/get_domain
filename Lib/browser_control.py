@@ -1,7 +1,5 @@
 # coding: utf-8
 '''
-Created on 2019��6��16��
-
 @author: guimaizi
 '''
 from selenium import webdriver
@@ -12,6 +10,7 @@ import requests, time
 from Lib import fun_all
 class browser_control:
     def __init__(self):
+        #print(1111111)
         self.config_main=fun_all.fun_all()
         #浏览器
         chrome_options = Options()
@@ -60,6 +59,7 @@ class browser_control:
         return list(set(list_url))
     def run(self,domain):
         try:
+            print(domain)
             url='http://%s'%domain
             r = requests.get(url,timeout=self.config_main.load_dict['timeout']-2)
             self.driver.get(url)
@@ -78,8 +78,10 @@ class browser_control:
         self.driver.quit()
 if __name__ == '__main__':
     try:
+        print(111)
         item=browser_control()
-        print(item.run('confinfo.map.qq.com'))
+        print(item.run('www.qq.com'))
         #print(item.callback_href_tmp())
         print(item.callback_link())
+    except Exception as e:print(e)
     finally:item.browser_exit()
