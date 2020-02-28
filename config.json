@@ -1,7 +1,7 @@
-{	"path":"/Users/guimaizi/eclipse-workspace/get_domain",
-	"target_json":"/Users/guimaizi/eclipse-workspace/get_domain/target/qq.json",
-	"chrome_path":"/Applications/Chromium.app/Contents/MacOS/Chromium",
-	"chromedriver_path":"/Users/guimaizi/hack-tool/chromedriver",
+{	"path":"G:/Code/get_domain",
+	"target_json":"G:/Code/get_domain/target/qq.json",
+	"chrome_path":"E:/software/chrome-win/chrome.exe",
+	"chromedriver_path":"G:/Code/Library/chromedriver.exe",
 	"timeout":8,
-	"mongo_config":{"ip":"127.0.0.1","port":27017,"name":"","password":""}
+	"mongo_config":{"ip":"192.168.0.137","port":27017,"name":"","password":""}
 }

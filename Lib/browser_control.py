@@ -16,6 +16,7 @@ class browser_control:
         chrome_options = Options()
         #headless模式运行
         chrome_options.add_argument('--headless')
+        chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
         #不加载图片
         chrome_options.add_argument('blink-settings=imagesEnabled=false')
         #调用当前chrome用户数据 cookie登陆方式
@@ -60,16 +61,19 @@ class browser_control:
     def run(self,domain):
         try:
             print(domain)
+            headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'}
             url='http://%s'%domain
-            r = requests.get(url,timeout=self.config_main.load_dict['timeout']-2)
-            self.driver.get(url)
-            result = EC.alert_is_present()(self.driver)
-            if result:result.dismiss()
-            self.driver.implicitly_wait(self.config_main.load_dict['timeout']-1)
-            self.driver.set_script_timeout(self.config_main.load_dict['timeout']-1)
-            self.driver.set_page_load_timeout(self.config_main.load_dict['timeout'])   
-            html_size=len(self.driver.page_source)
-            return {"domain":domain,"url":self.driver.current_url,"status":0,"title":self.driver.title,"http_length":html_size,"http_status":r.status_code,"time":self.time,"Remarks":""}
+            r = requests.get(url,timeout=self.config_main.load_dict['timeout']-2,headers=headers)
+            if r.status_code in [200,301,302,500,404,403,401]:
+                self.driver.get(url)
+                result = EC.alert_is_present()(self.driver)
+                if result:result.dismiss()
+                self.driver.implicitly_wait(self.config_main.load_dict['timeout']-1)
+                self.driver.set_script_timeout(self.config_main.load_dict['timeout']-1)
+                self.driver.set_page_load_timeout(self.config_main.load_dict['timeout'])   
+                html_size=len(self.driver.page_source)
+                return {"domain":domain,"url":self.driver.current_url,"status":0,"title":self.driver.title,"http_length":html_size,"http_status":r.status_code,"time":self.time,"Remarks":""}
+            else:return []
             r.close()
         except Exception as e:
             print(url+':'+str(e))
